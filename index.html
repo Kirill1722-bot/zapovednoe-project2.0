@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Заповедное — Участки с проектами домов</title>
+    
+    <!-- SEO мета-теги -->
+    <meta name="description" content="ДПК Заповедное — участки с готовыми проектами домов из бруса под усадку + 15 соток земли в Московской области. Цены от 1 950 000 руб.">
+    <meta name="keywords" content="дачный поселок Заповедное, участки с домами, дома из бруса, Московская область, купить участок">
+    <meta property="og:title" content="ДПК Заповедное — участки с домами">
+    <meta property="og:description" content="Экологически чистые дома под усадку + 15 соток. Проекты от 108 до 192 м².">
+    <meta property="og:type" content="website">
+    <meta property="og:image" content="images/gen.jpg">
+
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <h1 class="logo">Заповедное</h1>
+            <nav>
+                <a href="index.html" class="active">Заповедное</a>
+                <a href="kolosok.html">Колосок</a>
+            </nav>
+            <div class="contacts">
+                <p>+7 (495) 724-28-98</p>
+                <p>zapovednoe07@mail.ru</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="container">
+            <h2>Участки с проектами домов под усадку</h2>
+            <p>Экологически чистые дома из бруса + 15 соток земли в Московской области</p>
+        </div>
+    </section>
+
+    <section class="genplan container">
+        <h2>Генеральный план поселка</h2>
+        <img src="images/gen.jpg" alt="Генеральный план" class="zoomable large-img">
+    </section>
+
+    <section class="houses container">
+        <h2>Доступные проекты</h2>
+        
+        <div class="filters">
+            <button class="filter active" data-filter="all">Все</button>
+            <button class="filter" data-filter="small">До 140 м²</button>
+            <button class="filter" data-filter="medium">140–160 м²</button>
+            <button class="filter" data-filter="large">От 160 м²</button>
+            <button class="filter" data-sort="price-asc">Дешевле</button>
+            <button class="filter" data-sort="price-desc">Дороже</button>
+        </div>
+
+        <div class="houses-grid">
+            <div class="house-card" data-house-id="1" data-size="small" data-price="2450000">
+                <img src="images/gal.jpg" alt="Галич №76">
+                <h3>Галич №76</h3>
+                <p>135 м² + 15 соток = 2 450 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="2" data-size="medium" data-price="2050000">
+                <img src="images/zod.jpg" alt="Зодчий №61">
+                <h3>Зодчий №61</h3>
+                <p>144 м² + 15 соток = 2 050 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="3" data-size="large" data-price="2100000">
+                <img src="images/rub.jpg" alt="Рублевка №59">
+                <h3>Рублевка №59</h3>
+                <p>192 м² + 15 соток = 2 100 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="4" data-size="medium" data-price="2400000">
+                <img src="images/mos.jpg" alt="Москва №51">
+                <h3>Москва №51</h3>
+                <p>160 м² + 15 соток = 2 400 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="5" data-size="large" data-price="2400000">
+                <img src="images/kos.jpg" alt="Кострома №53">
+                <h3>Кострома №53</h3>
+                <p>162 м² + 15 соток = 2 400 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="6" data-size="small" data-price="1950000">
+                <img src="images/nog.jpg" alt="Ногинск №57">
+                <h3>Ногинск №57</h3>
+                <p>108 м² + 15 соток = 1 950 000 ₽</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="7" data-size="large" data-price="0">
+                <img src="images/001.jpg" alt="КД 001">
+                <h3>КД 001</h3>
+                <p>178,4 м²</p>
+                <button>Подробнее</button>
+            </div>
+            <div class="house-card" data-house-id="8" data-size="medium" data-price="0">
+                <img src="images/003.jpg" alt="КД 003">
+                <h3>КД 003</h3>
+                <p>142,2 м²</p>
+                <button>Подробнее</button>
+            </div>
+        </div>
+    </section>
+
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <img id="modal-image" src="" alt="Дом" class="modal-img">
+            <div id="modal-description" class="description"></div>
+        </div>
+    </div>
+
+    <section class="map-section container">
+        <h2>Расположение</h2>
+        <p id="distance">Определяем ваше местоположение...</p>
+        <div id="map"></div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <p>Адрес: лин. 1-я, 13, Мичуринец СНТ, Московская обл., 141603</p>
+            <p>Тел: +7 (495) 724-28-98 | Email: zapovednoe07@mail.ru</p>
+        </div>
+    </footer>
+
+    <script src="https://api-maps.yandex.ru/2.1/?apikey=a8c2e01e-635a-420c-8701-c577705c02fd&lang=ru_RU" type="text/javascript"></script>
+    <script src="script.js"></script>
+</body>
+</html>
