@@ -1,0 +1,43 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+body { font-family: 'Roboto', sans-serif; background: #f3e5f5; color: #333; }
+.container { max-width: 1200px; margin: 0 auto; padding: 20px; }
+
+.header { background: #6a1b9a; color: white; padding: 15px 0; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
+.header .container { display: flex; justify-content: space-between; align-items: center; }
+.logo { font-size: 28px; font-weight: bold; }
+nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: opacity 0.3s; }
+nav a:hover, nav a.active { opacity: 0.8; }
+.contacts p { margin: 5px 0; font-size: 14px; }
+
+.hero { background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://zemlyamo.ru/upload/iblock/f82/el0hflx5d1skafpxjrkipj9nnw3bl9jk.jpg'); background-size: cover; color: white; text-align: center; padding: 80px 20px; }
+.hero h2 { font-size: 36px; margin-bottom: 10px; }
+
+.genplan, .map-section { margin: 40px 0; text-align: center; }
+.large-img { max-width: 80%; border-radius: 10px; box-shadow: 0 4px 20px rgba(106,27,154,0.3); cursor: zoom-in; transition: transform 0.5s; margin: 20px auto; display: block; }
+.large-img:hover { transform: scale(1.05); }
+
+#map { width: 100%; height: 300px; border-radius: 10px; box-shadow: 0 4px 20px rgba(106,27,154,0.3); }
+#distance { font-size: 18px; margin-bottom: 10px; font-weight: bold; color: #ab47bc; }
+
+.filters { margin-bottom: 30px; text-align: center; }
+.filter { background: #ab47bc; color: white; border: none; padding: 10px 20px; margin: 5px; border-radius: 30px; cursor: pointer; font-weight: bold; transition: background 0.3s; }
+.filter.active, .filter:hover { background: #6a1b9a; }
+
+.houses-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 30px; }
+.house-card { background: white; border-radius: 15px; overflow: hidden; box-shadow: 0 4px 15px rgba(106,27,154,0.3); transition: transform 0.3s; text-align: center; }
+.house-card:hover { transform: translateY(-10px); }
+.house-card img { width: 100%; height: 200px; object-fit: cover; }
+.house-card h3 { padding: 15px; color: #6a1b9a; }
+.house-card button { background: #6a1b9a; color: white; border: none; padding: 10px 20px; margin-bottom: 15px; cursor: pointer; border-radius: 5px; transition: background 0.3s; }
+.house-card button:hover { background: #ab47bc; }
+
+.modal { display: none; position: fixed; z-index: 1000; left: 0; top: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.85); justify-content: center; align-items: center; padding: 20px; }
+.modal-content { background: white; border-radius: 20px; max-width: 900px; width: 90%; box-shadow: 0 15px 60px rgba(106, 27, 154, 0.6); overflow: hidden; position: relative; }
+.close { position: absolute; top: 15px; right: 25px; font-size: 40px; font-weight: bold; color: #aaa; cursor: pointer; z-index: 10; }
+.close:hover { color: #000; }
+.modal-img { width: 100%; height: auto; max-height: 70vh; object-fit: contain; display: block; cursor: zoom-in; transition: transform 0.6s ease; }
+.modal-img.zoomed { transform: scale(1.8); cursor: zoom-out; }
+.description { background: #f3e5f5; padding: 25px; border-radius: 0 0 20px 20px; text-align: left; font-size: 16px; line-height: 1.6; max-height: 30vh; overflow-y: auto; }
+.description h2 { color: #6a1b9a; margin-bottom: 15px; font-size: 24px; }
+
+.footer { background: #6a1b9a; color: white; text-align: center; padding: 30px; margin-top: 50px; }
